@@ -1,50 +1,27 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
-import './App.css';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { FC, memo } from 'react';
+import { ConfigPage } from 'pages/ConfigPage';
+import { MainPage } from 'pages/MainPage';
+import { Box, ChakraProvider } from '@chakra-ui/react';
+import { theme } from './theme';
+import { Provider } from 'react-redux';
+import { store } from 'entities/store';
 
-function Hello() {
+const App: FC = () => {
   return (
-    <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
-    </div>
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <Box display="flex" minW="100vw" minH="100vh">
+          <MemoryRouter initialEntries={['/']}>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/config" element={<ConfigPage />} />
+            </Routes>
+          </MemoryRouter>
+        </Box>
+      </ChakraProvider>
+    </Provider>
   );
-}
+};
 
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
-  );
-}
+export default memo(App);
