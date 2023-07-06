@@ -1,5 +1,3 @@
 import styled from 'styled-components';
 
-export const SConfigScreen = styled.div`
-
-`
+export const SConfigScreen = styled.div``;

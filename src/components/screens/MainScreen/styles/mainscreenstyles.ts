@@ -7,6 +7,7 @@ export const SMainScreen = styled.div`
   height: 100%;
   margin: 0;
   padding: 10px;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: 1.5fr 3fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr 1.6fr 1fr;
+  grid-template-rows: 1.8fr 3fr 1.5fr;
+  gap: 10px;
 `;

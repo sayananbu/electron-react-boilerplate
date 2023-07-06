@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { SLabelProgress } from './styles/labelprogressStyles';
 
 type LabelProgressProps = {
   label: string;
-  value: number;
+  value: number | string;
 };
-const LabelProgress: FC<LabelProgressProps> = ({ label, value }) => {
+const LabelValue: FC<LabelProgressProps> = ({ label, value }) => {
   return (
     <SLabelProgress>
       <span>{label}</span>
@@ -14,4 +14,4 @@ const LabelProgress: FC<LabelProgressProps> = ({ label, value }) => {
   );
 };
 
-export default LabelProgress;
+export default memo(LabelValue);

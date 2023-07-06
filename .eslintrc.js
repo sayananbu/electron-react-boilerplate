@@ -5,7 +5,6 @@ module.exports = {
     'airbnb-typescript',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
   ],
   plugins: [
@@ -31,14 +30,18 @@ module.exports = {
         ],
       },
     ],
-    prettier: {
-      singleQuote: true,
-      jsxSingleQuote: true,
-    },
-    'prettier/prettier': [
-      'error',
+    'import/prefer-default-export': 'off',
+    'import/newline-after-import': [
+      'warn',
       {
-        endOfLine: 'auto',
+        count: 1,
+      },
+    ],
+    'import/order': 'off',
+    'react/self-closing-comp': 'off',
+    'prettier/prettier': [
+      'off',
+      {
         singleQuote: true,
         jsxBracketSameLine: false,
         jsxSingleQuote: true,

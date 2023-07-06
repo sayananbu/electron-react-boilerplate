@@ -1,20 +1,19 @@
 import { FC, memo } from 'react';
+import VerticalProgress from 'components/common/VerticalProgress/VerticalProgress';
 import {
   LinearProgressContainer,
   SProgressFragmentContainer,
 } from './styles/progressfragmentstyles';
-import VerticalProgress from 'components/common/VerticalProgress/VerticalProgress';
-import LabelProgress from 'components/common/LabelProgress/LabelProgress';
+import LabelValue from 'components/common/LabelValue/LabelValue';
 
-type ProgressFragmentProps = {};
-const ProgressFragment: FC<ProgressFragmentProps> = () => {
+const ProgressFragment: FC = () => {
   return (
     <SProgressFragmentContainer>
-      <LabelProgress label={'Max:'} value={100}/>
+      <LabelValue label='Max:' value={100} />
       <LinearProgressContainer>
         <VerticalProgress />
       </LinearProgressContainer>
-      <LabelProgress label={'Min:'} value={0}/>
+      <LabelValue label='Min:' value={0} />
     </SProgressFragmentContainer>
   );
 };

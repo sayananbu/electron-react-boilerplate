@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import 'normalize.css'
+import 'normalize.css';
 import GlobalStyles from './GlobalStyles';
 
 const container = document.getElementById('root') as HTMLElement;

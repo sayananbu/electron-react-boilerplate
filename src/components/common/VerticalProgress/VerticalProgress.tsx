@@ -1,20 +1,19 @@
-import Slider from "@mui/material/Slider";
-import { FC, memo } from "react";
+import Slider from '@mui/material/Slider';
+import { FC, memo } from 'react';
 
-type VerticalProgressProps = {}
-const VerticalProgress: FC<VerticalProgressProps> = () => {
+const VerticalProgress: FC = () => {
   return (
     <Slider
       value={20}
       min={0}
       step={1}
-      orientation="vertical"
+      orientation='vertical'
       max={100}
       sx={{
         height: '100%',
         width: '40%',
         borderRadius: 1,
-        cursor:'default ',
+        cursor: 'default ',
         '& .MuiSlider-thumb': {
           width: 0,
           height: 0,
@@ -34,4 +33,4 @@ const VerticalProgress: FC<VerticalProgressProps> = () => {
     />
   );
 };
-export default memo(VerticalProgress)
+export default memo(VerticalProgress);

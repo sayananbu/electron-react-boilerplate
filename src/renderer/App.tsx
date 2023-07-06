@@ -9,8 +9,8 @@ const App: FC = () => {
     <SApp>
       <MemoryRouter initialEntries={['/']}>
         <Routes>
-          <Route path="/" element={<MainScreen />} />
-          <Route path="/config" element={<ConfigScreen />} />
+          <Route path='/' element={<MainScreen />} />
+          <Route path='/config' element={<ConfigScreen />} />
         </Routes>
       </MemoryRouter>
     </SApp>

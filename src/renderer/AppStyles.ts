@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const SApp = styled.div`
   display: flex;
   align-items: center;
@@ -7,4 +8,5 @@ export const SApp = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #ffdfac;
+  font-family:'calibri';
 `;
