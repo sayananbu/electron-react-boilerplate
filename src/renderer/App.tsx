@@ -1,19 +1,26 @@
-import MainScreen from 'components/screens/MainScreen/MainScreen';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import ConfigScreen from 'components/screens/ConfigScreen/ConfigScreen';
 import { FC, memo } from 'react';
-import { SApp } from './AppStyles';
+import { ConfigPage } from 'pages/ConfigPage';
+import { MainPage } from 'pages/MainPage';
+import { Box, ChakraProvider } from '@chakra-ui/react';
+import { theme } from './theme';
+import { Provider } from 'react-redux';
+import { store } from 'entities/store';
 
 const App: FC = () => {
   return (
-    <SApp>
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path='/' element={<MainScreen />} />
-          <Route path='/config' element={<ConfigScreen />} />
-        </Routes>
-      </MemoryRouter>
-    </SApp>
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <Box display="flex" minW="100vw" minH="100vh">
+          <MemoryRouter initialEntries={['/']}>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/config" element={<ConfigPage />} />
+            </Routes>
+          </MemoryRouter>
+        </Box>
+      </ChakraProvider>
+    </Provider>
   );
 };
 

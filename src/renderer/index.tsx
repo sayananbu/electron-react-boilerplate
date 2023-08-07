@@ -1,15 +1,11 @@
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import 'normalize.css';
-import GlobalStyles from './GlobalStyles';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
 root.render(
-  <>
-    <App />
-    <GlobalStyles />
-  </>
+  <App />,
 );
 
 // calling IPC exposed from preload script
