@@ -20,6 +20,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'import/extensions': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': [
       'error',
       {
@@ -39,6 +40,7 @@ module.exports = {
     ],
     'import/order': 'off',
     'react/self-closing-comp': 'off',
+    '@typescript-eslint/comma-dangle':'off',
     'prettier/prettier': [
       'off',
       {
