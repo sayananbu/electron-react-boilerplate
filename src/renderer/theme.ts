@@ -7,6 +7,40 @@ export const theme = extendTheme({
         lineHeight:1
       }
     },
+    Checkbox:{
+      baseStyle:{
+        control:{
+          border:'1px solid red',
+          w:'35px',
+          h:'35px',
+          bg:'elems.primary',
+          _checked:{
+            bg:'elems.primary',
+            _hover:null
+          },
+
+        },
+        icon:{
+          color:'#000',
+          size:'20px'
+        }
+      }
+    },
+    Radio:{
+      baseStyle:{
+        control:{
+          display:'none'
+        },
+        container:{
+          _hover:{
+            bg:'gray.200'
+          },
+          _checked:{
+            bg:'blue.200'
+          }
+        }
+      }
+    },
     Button: {
       baseStyle: {
         borderRadius: '10px',

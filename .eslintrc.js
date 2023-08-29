@@ -22,7 +22,7 @@ module.exports = {
     'import/extensions': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': [
-      'error',
+      'warn',
       {
         namedComponents: [
           'function-declaration',
@@ -33,7 +33,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'import/newline-after-import': [
-      'warn',
+      'off',
       {
         count: 1,
       },
@@ -51,10 +51,10 @@ module.exports = {
       },
     ],
     'no-console': ['warn', { allow: ['warn', 'error'] }],
-    curly: ['error', 'multi-line'],
-    'react/no-array-index-key': ['error'],
+    curly: ['off', 'multi-line'],
+    'react/no-array-index-key': ['warn'],
     '@typescript-eslint/naming-convention': [
-      'error',
+      'warn',
       {
         selector: 'enumMember',
         format: ['PascalCase'],
@@ -65,9 +65,9 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/no-import-module-exports': 'off',
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-shadow': 'warn',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {

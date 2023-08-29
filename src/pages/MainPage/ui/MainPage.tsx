@@ -6,6 +6,9 @@ import { ValueBar } from 'widgets/ValueBar';
 import { memo } from 'react';
 import { ServiceButtons } from 'widgets/ServiceButtons';
 import { DeviceGeneralConfigs } from 'widgets/DeviceGeneralConfigs';
+import { ItemsSelector } from 'widgets/ItemsSelector';
+import { channels, settings } from '../model/mock';
+import { DeviceSettingsConfig } from 'widgets/DeviceSettingsConfig';
 
 export const MainPage = memo(() => {
   return (
@@ -32,6 +35,15 @@ export const MainPage = memo(() => {
       </Rounded>
       <Rounded row="1" column="3">
         <DeviceGeneralConfigs />
+      </Rounded>
+      <Rounded row="1" column="4">
+        <ItemsSelector label='Select Channel' itemsList={channels}/>
+      </Rounded>
+      <Rounded row="2" column="4">
+        <ItemsSelector label='Select Setting' itemsList={settings}/>
+      </Rounded>
+      <Rounded row="2" column="span 2">
+        <DeviceSettingsConfig />
       </Rounded>
     </Grid>
   );
